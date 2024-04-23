@@ -33,9 +33,12 @@ cmake_dependent_option(SBEPP_BUILD_BENCHMARK
 option(SBEPP_BUILD_SBEPPC "Build sbeppc schema compiler" ON)
 option(SBEPP_BUILD_DOCS "Build documentation" OFF)
 
+
 add_subdirectory(sbepp)
 
 if(SBEPP_BUILD_SBEPPC)
+    add_subdirectory(3rdparty/fmt)
+    add_subdirectory(3rdparty/pugixml)
     add_subdirectory(sbeppc)
 endif()
 

@@ -1,6 +1,3 @@
-find_package(fmt REQUIRED)
-find_package(pugixml REQUIRED)
-
 set(target "sbepp_sbeppc")
 add_executable(${target})
 add_executable(sbepp::sbeppc ALIAS ${target})
